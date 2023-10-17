@@ -1,7 +1,17 @@
 package org.example;
-
+import java.util.Scanner;
 public class Main {
+
+    private static boolean checkedOut = false;
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Which book would you like to check out?");
+        String bookTitle = scanner.nextLine();
+
+
+
 
 
         Book[] bookArray = new Book [20];
@@ -28,20 +38,10 @@ public class Main {
         bookArray[19] = new Book(20, "190", "Romeo and Juliet", false, "" );
 
 
-        String bookTitle = "bookChoice";
-        checkOut(bookTitle);
-        checkIn(bookTitle);
 
-        //create a method to check out book title
-         Book checkOut;(String bookTitle = "book choice";{
-            //perform checkout task
-            System.out.println("You are now checking out: " + bookTitle);
-        }
-        //create a method to check in book title
-        public static Book checkIn(bookTitle) {
-            //perform check in task
-            System.out.println("You are now checking in" + bookTitle);
-        }
+
+
+
 
     }
 }

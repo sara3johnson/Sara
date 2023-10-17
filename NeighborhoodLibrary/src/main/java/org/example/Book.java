@@ -1,5 +1,6 @@
 package org.example;
 
+
 public class Book {
 
     //create properties
@@ -8,6 +9,7 @@ public class Book {
     private String bookTitle;
     private boolean isCheckedOut;
     private String checkedOutTo;
+
 
     //create getters and setters for properties
     public Book(int bookId, String bookIsbn, String bookTitle, boolean isCheckedOut, String checkedOutTo) {
@@ -55,6 +57,17 @@ public class Book {
 
     public void setCheckedOutTo(String checkedOutTo) {
         this.checkedOutTo = checkedOutTo;
+    }
+
+    //method to checkout
+    public void checkedOut(String checkedOutTo){
+        this.isCheckedOut = true;
+        this.checkedOutTo = checkedOutTo;
+    }
+
+    public void checkedIn() {
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
     }
 
 
