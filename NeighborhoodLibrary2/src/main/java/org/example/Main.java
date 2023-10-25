@@ -2,6 +2,11 @@ package org.example;
 
 import java.util.Scanner;
 
+/*
+You have the skeleton of what needs to be done, but the check out doesn't work.
+You need to work on those methods in the book class to perform the actual logic.
+I mean it looks nice, so work on that part and once you have it in the rest should fall into place.
+ */
 public class Main {
     private static boolean checkedOut = false;
     private static String checkedOutTo = "";
