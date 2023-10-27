@@ -13,7 +13,7 @@ public class Main {
         boolean isRunning = true;
         List<Account> transactionList = new ArrayList<>();
 
-
+//created a IO exception to catch any problems
         while(isRunning){
             System.out.println("Welcome to the Financial Tracker Application");
             System.out.println("Please select from the following options"); 
@@ -23,7 +23,7 @@ public class Main {
             System.out.println("X - Exit");
             System.out.println("Enter your choice: ");
             String userChoice = scanner.nextLine().toUpperCase();
-
+//switch case made for user input
             switch(userChoice) {
                 case "D":
                     HomeScreen.addDeposit((ArrayList<Account>) transactionList);

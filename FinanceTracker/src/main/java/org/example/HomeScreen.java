@@ -42,6 +42,7 @@ public class HomeScreen {
 
     }
 
+    //create add deposit method
     static void addDeposit(ArrayList<Account> transactionList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter deposit description: ");
@@ -63,7 +64,7 @@ public class HomeScreen {
         System.out.println("Payment successful!");
         // Make payment method  here
     }
-
+//display ledger method
     public static void displayLedger(ArrayList<Account> transactionList) {
         System.out.println("Welcome To the Display Ledger!");
         System.out.println("Options: ");
@@ -75,7 +76,7 @@ public class HomeScreen {
         System.out.println("Enter an option: ");
         Scanner scanner = new Scanner(System.in);
         String userChoice = scanner.nextLine().toUpperCase();
-
+//used switch case for users answers
         switch (userChoice) {
             case "A":
                 System.out.println("Display all: ");
@@ -96,7 +97,7 @@ public class HomeScreen {
                 break;
         }
     }
-
+// created a method to run transaction reports
     private static void runReports(ArrayList<Account> transactionList) {
         Scanner scanner = new Scanner(System.in);
         boolean isChoosing = true;
@@ -144,7 +145,7 @@ public class HomeScreen {
 
 
     }
-
+// create a method to search by vendor
     private static void searchByVendor(ArrayList<Account> transactionList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter vendor name: ");
@@ -186,7 +187,7 @@ public class HomeScreen {
         }
 
     }
-
+//year to date search method
     private static void yearToDate(ArrayList<Account> transactionList) {
         LocalDate currentDate = LocalDate.now();
         List<Account> filteredTransactions = new ArrayList<>();
@@ -256,7 +257,7 @@ public class HomeScreen {
             }
         }
     }
-
+// this method saves transactions
     static void saveTransaction() throws IOException {
         try{
             File file = new File("src/main/resources/transactions.csv");
