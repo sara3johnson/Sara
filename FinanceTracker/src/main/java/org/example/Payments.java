@@ -3,8 +3,27 @@ package org.example;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
+import static org.example.Main.payments;
+
 public class Payments {
     public static void makePayment(Scanner scanner){
+
+        try {
+            System.out.println("Enter payment description: ");
+            String description = scanner.nextLine();
+            System.out.println("Enter vendor name: ");
+            String vendorName = scanner.nextLine();
+            System.out.println("Enter payment amount: ");
+            double paymentAmount = Double.parseDouble(scanner.nextLine());
+
+            Payments payment = new Payments(LocalDateTime.now(), description, vendorName, paymentAmount);
+            payments.add(payment);
+
+            System.out.println("Payment saved successfully!");
+
+        } catch (NumberFormatException ex) {
+            System.out.println("Invalid input. Please enter a valid number.");
+        }
     }
     private LocalDateTime dateTime;
     private String description;
@@ -17,6 +36,9 @@ public class Payments {
         this.vendorName = vendorName;
         this.amount = amount;
     }
+
+
+
 
     public LocalDateTime getDateTime() {
         return dateTime;
@@ -57,4 +79,6 @@ public class Payments {
                 " | Vendor: " + vendorName +
                 " | Amount: " + amount;
     }
+
+
 }

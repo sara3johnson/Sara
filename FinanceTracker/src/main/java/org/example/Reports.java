@@ -201,26 +201,6 @@ public class Reports {
 
     }
 
-// this method saves transactions
-    static void saveTransaction() throws IOException {
-        try{
-            File file = new File("src/main/resources/transactions.csv");
-
-            boolean fileExists = file.exists();
-
-            FileWriter transactionWriter = new FileWriter("src/main/resources/transactions.csv", true);
-            for(Transactions transaction : transactions){
-                String data = transaction.getDateTime() + "|" + transaction.getDescription() + "|" +
-                        transaction.getVendor() + "|" + transaction.getAmount() + "\n";
-                transactionWriter.write(data);
-            }
-            transactionWriter.close();
-            System.out.println("Transactions saved successfully!");
-        }
-        catch (IOException ex){
-            System.out.println("Error reading transactions from CSV." + ex.getMessage());
-        }
-    }
 
     public static void uploadTransactions(){
         transactions.clear();

@@ -1,12 +1,14 @@
 package org.example;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class Deposits {
-    public static void addDeposit(Scanner scanner){
+import static org.example.Reports.deposits;
 
-    }
+public class Deposits {
+
     private LocalDateTime dateTime;
     private String description;
     private String vendorName;
@@ -17,6 +19,27 @@ public class Deposits {
         this.description = description;
         this.vendorName = vendorName;
         this.amount = amount;
+    }
+
+    public static void addDeposit(Scanner scanner) {
+
+        try {
+            System.out.println("Enter deposit description: ");
+            String description = scanner.nextLine();
+            System.out.println("Enter vendor: ");
+            String vendor = scanner.nextLine();
+            System.out.println("Enter deposit amount: ");
+            double amount = Double.parseDouble(scanner.nextLine());
+
+            Deposits deposit = new Deposits(LocalDateTime.now(), description, vendor, amount);
+            deposits.add(deposit);
+            FileWriter fileWriter = new FileWriter("src/main/resources/transactions.csv", true);
+            fileWriter.write((deposit.getDateTime() + "|" + description + "|" + vendor + "|" + amount));
+            fileWriter.close();
+            System.out.println("Deposit saved!");
+        } catch (IOException ex) {
+            System.out.println("Error!");
+        }
     }
 
     public LocalDateTime getDateTime() {
@@ -58,4 +81,13 @@ public class Deposits {
                 " | Vendor: " + vendorName +
                 " | Amount: " + amount;
     }
-}
+
+
+
+
+
+
+    }
+
+
+

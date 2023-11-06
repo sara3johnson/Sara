@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class Main {
     public static ArrayList<Transactions> transactions = new ArrayList<>();
     public static ArrayList<Payments> payments = new ArrayList<>();
@@ -59,27 +60,8 @@ public class Main {
         }
     }
 
-        public static void addDeposit(Scanner scanner) throws IOException {
-            try {
-                System.out.println("Enter deposit description: ");
-                String description = scanner.nextLine();
-                System.out.println("Enter vendor: ");
-                String vendor = scanner.nextLine();
-                System.out.println("Enter deposit amount: ");
-                double amount = Double.parseDouble(scanner.nextLine());
 
-                Deposits deposit = new Deposits(LocalDateTime.now(), description, vendor, amount);
-                deposits.add(deposit);
-                FileWriter fileWriter = new FileWriter("src/main/resources/transactions.csv", true);
-                fileWriter.write((deposit.getDateTime() + "|" + description + "|" + vendor + "|" + amount));
-                fileWriter.close();
-                System.out.println("Deposit saved!");
-            } catch (IOException ex) {
-                System.out.println("Error!");
-            }
-        }
-
-            public static void makePayments(Scanner scanner) {
+            public static void makePayments (Scanner scanner) {
                 try {
                     System.out.println("Enter payment description");
                     String description = scanner.nextLine();
@@ -103,6 +85,8 @@ public class Main {
                     System.out.println("Error: " + ex.getMessage());
                 }
             }
+
+
 
 
 
