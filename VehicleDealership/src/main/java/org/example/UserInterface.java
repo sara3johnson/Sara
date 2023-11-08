@@ -187,7 +187,7 @@ public class UserInterface {
         public void functionGetByVehicleType(){
         boolean isGettingVehicleType = true;
 
-        while(isGettingVehicleType){
+        while(isGettingVehicleType) {
             try {
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Enter desired vehicle body type");
@@ -196,12 +196,12 @@ public class UserInterface {
                 List<Vehicle> vehicleList = dealership.getVehicleByType(vehicleType);
                 displayVehicles(vehicleList);
                 isGettingVehicleType = false;
-            } catch(InputMismatchException ex){
+            } catch (InputMismatchException ex) {
                 System.out.println("Input error!");
 
             }
 
-
+        }
         }
 
             private void processAddVehicle() {
@@ -231,10 +231,10 @@ public class UserInterface {
                 System.out.println("New vehicle added successfully!\n");
             }
 
-        public static void functionListAllVehicles(){
+        public void functionListAllVehicles(){
            List<Vehicle> allVehicles = dealership.getAllVehicles();
-           displayVehicles();
-                }
+           displayVehicles(allVehicles);
+        }
 
 
             public void functionRemoveVehicleRequest(){
@@ -306,4 +306,4 @@ public class UserInterface {
 
 }
 
-}
+

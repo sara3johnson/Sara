@@ -18,7 +18,12 @@ public class DealershipFileManager {
     //take that vehicle and add it to the inventoryList of the desire Dealership
     //after the loop is finished , return the dealership
 
+    //I like the use of final here, it makes it a constant.
     public static final String VEHICLES_FILE_PATH = "src/main/resources/Vehicles.csv";
+
+    //Good this method should be static. You should probably make a private constructor for the
+    //DealershipFileManager
+    //I also fixed the syntax issues
         public static Dealership getDealership() {
 
             List<Vehicle> vehicleList = new ArrayList<>();
@@ -29,7 +34,7 @@ public class DealershipFileManager {
             try {
                 FileInputStream fileInputStream = new FileInputStream(VEHICLES_FILE_PATH);
 
-                Scanner scanner = new Scanner(fileInputStream)) {
+                Scanner scanner = new Scanner(fileInputStream);
 
                     while (scanner.hasNextLine()) {
                         String line = scanner.nextLine();
@@ -52,7 +57,7 @@ public class DealershipFileManager {
                             System.out.println("Invalid data in the file: " + VEHICLES_FILE_PATH);
                         }
                     }
-                }
+
             } catch (IOException ex) {
                 System.out.println("File not found: " + VEHICLES_FILE_PATH);
             } catch (NumberFormatException ex) {

@@ -9,7 +9,8 @@ public class Dealership {
     private String address;
     private String phone;
 
-    private static ArrayList<Vehicle> inventory;
+    //There's no reason for this to be static.
+    private ArrayList<Vehicle> inventory;
 
     public Dealership(String name, String address, String phone) {
         this.name = name;
@@ -107,19 +108,21 @@ public class Dealership {
         return filteredVehicles;
     }
 
-    public static List<Vehicle> getAllVehicles(String allVehicles){
+    //Why does this method need a string?
+    //How does the variable allVehicles help you return all the vehicles in the dealership
+    public List<Vehicle> getAllVehicles(){
         return inventory;
 
     }
 
-    public static List<Vehicle> addVehicle(Vehicle vehicle){
+    public List<Vehicle> addVehicle(Vehicle vehicle){
         inventory.add(vehicle);
         return inventory;
-
     }
 
-    public static List<Vehicle> removeVehicle(){
-        inventory.remove(removeVehicle());
+    public List<Vehicle> removeVehicle(Vehicle vehicle){
+        //This is going to be an infinite loop if you have the function call itself in the function.
+        inventory.remove(vehicle);
         return inventory;
     }
 
