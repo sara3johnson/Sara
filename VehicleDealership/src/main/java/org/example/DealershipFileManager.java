@@ -27,7 +27,7 @@ public class DealershipFileManager {
             Dealership dealership = new Dealership("D & B Used Cars", "111 Old Benbrook Rd", "817-555-5555");
 
             try {
-                FileInputStream fileInputStream = new FileInputStream(VEHICLES_FILE_PATH);
+               try(FileInputStream fileInputStream = new FileInputStream(VEHICLES_FILE_PATH);
 
                 Scanner scanner = new Scanner(fileInputStream)) {
 

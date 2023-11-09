@@ -1,6 +1,5 @@
 package org.example;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,22 +106,20 @@ public class Dealership {
         return filteredVehicles;
     }
 
-    public static List<Vehicle> getAllVehicles(String allVehicles){
-        return inventory;
-
-    }
-
     public static List<Vehicle> addVehicle(Vehicle vehicle){
         inventory.add(vehicle);
         return inventory;
 
     }
 
-    public static List<Vehicle> removeVehicle(){
-        inventory.remove(removeVehicle());
+    public static List<Vehicle> removeVehicle(Vehicle vehicle){
+        inventory.remove(removeVehicle(vehicle));
         return inventory;
     }
 
+    public List<Vehicle> getAllVehicles() {
+        return inventory;
+    }
 }
 
 
