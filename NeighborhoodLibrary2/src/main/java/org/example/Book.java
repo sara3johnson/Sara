@@ -1,7 +1,7 @@
 package org.example;
 
 public class Book {
-
+    //Small quibble, no need to put the world book in front of the property since the class is named Book
     //create properties
     private int bookId;
     private String bookIsbn;
@@ -17,6 +17,15 @@ public class Book {
         this.checkedOutTo = checkedOutTo;
     }
 
+    //You could do the constructor like this for less typing since you know in the beginning it won't be checked out
+    //and it's not checked out to anyone
+    public Book(int id, String isbn, String title) {
+        this.bookId = id;
+        this.bookIsbn = isbn;
+        this.bookTitle = title;
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
+    }
 
     public int getBookId() {
         return bookId;
@@ -58,10 +67,18 @@ public class Book {
         this.checkedOutTo = checkedOutTo;
     }
 
+    //These are good starts but the methods need some logic.
     public void checkedOut(String usersName) {
+        //Here's some pseudo code for you to think about
+        //If the book is already checked out, what do you do?
+
+        //if the book is not already checked out, we allow the user to check it out
+        //How do we mark that the book is checked out?
+        //How do we mark to whom the book is checked out?
     }
 
     public void checkedIn() {
+        //The logic here is going to be the reverse of the logic in checkedOut method
     }
 }
 
