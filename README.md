@@ -1,2 +1,6 @@
 # Sara
-I created an accounting ledger app that allows the user to search through Deposits, Payments and all transactions
+As I start my journey as a junior developer
+Here are some projects I've wokred on both solo and collaboratively.
+They showcase my skills in Java (OOP), SQL, and Spring Frameworks
+
+Thank you for stopping by!
