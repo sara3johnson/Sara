@@ -21,6 +21,7 @@ public class Deposits {
         this.amount = amount;
     }
 
+
     public static void addDeposit(Scanner scanner) {
 
         try {

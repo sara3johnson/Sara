@@ -24,7 +24,7 @@ public class Main {
         else if(userInput > age){
             System.out.println("Nope! I'm NOT that old!");
 
-         else if {
+          if(userInput < age) {
              System.out.print("You guessed too low!");
             }
         }

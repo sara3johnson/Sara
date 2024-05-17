@@ -162,15 +162,15 @@ public class Ledger {
         }
 
         public static void displayDeposits(){
+            System.out.println("Deposits:");
             for(Deposits deposit : deposits){
-                System.out.println("Deposits: ");
-
+                System.out.println(deposit);
 
             }
         }
 
         public static void displayTransaction(){
-            System.out.println("Transactions: ");
+            System.out.println("Transactions:");
             for(Transactions transaction : transactions){
                 System.out.println(transaction);
             }

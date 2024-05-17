@@ -1,2 +1,11 @@
-package org.example;public enum RegularToppings {
+package org.example;
+
+public enum RegularToppings {
+
+    LETTUCE,
+    PEPPERS,
+    ONIONS,
+    TOMATOES,
+    JALEPENOS,
+    CUCUMBERS
 }

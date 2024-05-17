@@ -1,6 +1,6 @@
 package org.example;
 
-public interface Interface {
+public interface Builder {
 
     void setBreadType(Bread bread);
     void setRegularToppingType(RegularTopping topping);

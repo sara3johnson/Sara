@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d90c0cf4-f512-465f-b3df-4d6c31e3d003" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../capstone-starter/capstone-starter/src/main/java/org/yearup/controllers/ProductControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workshop_project/src/main/java/com/example/workshop_project/controllers/VehicleSearchCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workshop_project/src/main/java/com/example/workshop_project/models/Dealership.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workshop_project/src/main/java/com/example/workshop_project/models/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workshop_project/src/main/java/com/example/workshop_project/models/repositories/VehicleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workshop_project/src/main/java/com/example/workshop_project/models/services/VehicleServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OnlineBookStore/src/main/java/org/example/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineBookStore/src/main/java/org/example/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OnlineBookStore/src/main/java/org/example/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineBookStore/src/main/java/org/example/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OnlineBookStore/src/main/java/org/example/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineBookStore/src/main/java/org/example/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Bread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Bread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/BreadLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/BreadLength.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Cheese.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Cheese.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Meat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Meat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/RegularTopping.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/RegularTopping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Sauce.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Sauce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SandwichInterface/src/main/java/org/example/Side.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Bread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Bread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Meats.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Meats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subway/src/main/java/org/example/RegularToppings.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Subway/src/main/java/org/example/RegularToppings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Sandwich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Sauces.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Sauces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Toppings.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Subway/src/main/java/org/example/Toppings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/Dealership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/DealershipFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/Sales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VehicleDealership/src/main/java/org/example/UserInterface.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2aShB5FjpaKnxjXbxLuKEDNQw3r" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/LearnToCode/Sara/FinalCapstone1"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d90c0cf4-f512-465f-b3df-4d6c31e3d003" name="Changes" comment="" />
+      <created>1704317748803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704317748803</updated>
+    </task>
+    <servers />
+  </component>
+</project>

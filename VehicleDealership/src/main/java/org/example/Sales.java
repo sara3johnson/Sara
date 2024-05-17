@@ -54,8 +54,7 @@ public class Sales extends Contract {
 
     @Override
     public double getTotalPrice() {
-        double
-
+        return 0;
 
     }
 

@@ -3,9 +3,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import static java.lang.Double.parseDouble;
+
 public class DealershipFileManager {
 
     //make a file input stream that points to the file that holds my vehicles
@@ -18,48 +19,41 @@ public class DealershipFileManager {
     //take that vehicle and add it to the inventoryList of the desire Dealership
     //after the loop is finished , return the dealership
 
-    public static final String VEHICLES_FILE_PATH = "src/main/resources/Vehicles.csv";
+    private DealershipFileManager(){
+
+    }
+
+   // public static final String VEHICLES_FILE_PATH = "src/main/resources/Vehicles.csv";
         public static Dealership getDealership() {
-
-            List<Vehicle> vehicleList = new ArrayList<>();
-
 
             Dealership dealership = new Dealership("D & B Used Cars", "111 Old Benbrook Rd", "817-555-5555");
 
+
+            //List<Vehicle> vehicleList = new ArrayList<>();
+
             try {
-               try(FileInputStream fileInputStream = new FileInputStream(VEHICLES_FILE_PATH);
+               FileInputStream fileInputStream = new FileInputStream("src/main/resources/vehicles.csv");
 
-                Scanner scanner = new Scanner(fileInputStream)) {
+                Scanner scanner = new Scanner(fileInputStream);
 
+                scanner.nextLine();
+
+                    String input;
                     while (scanner.hasNextLine()) {
-                        String line = scanner.nextLine();
-                        String[] vehicle = line.split("\\|");
-                        if (vehicle.length == 8) {
-                            int vin = Integer.parseInt(vehicle[0]);
-                            int year = Integer.parseInt(vehicle[1]);
-                            String make = vehicle[2];
-                            String model = vehicle[3];
-                            String vehicleType = vehicle[4];
-                            String color = vehicle[5];
-                            int odometer = Integer.parseInt(vehicle[6]);
-                            double price = Double.parseDouble(vehicle[7]);
+                        input = scanner.nextLine();
+                        String[] dataRow = input.split("\\|");
+                        Vehicle vehicle = new Vehicle(Integer.parseInt(dataRow[0]), Integer.parseInt(dataRow[1]), dataRow[2],
+                                dataRow[3], dataRow[4], dataRow[5], Integer.parseInt(dataRow[6]), Double.parseDouble(dataRow[7]));
 
-                            Vehicle newVehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
-                            vehicleList.add(newVehicle);
-
-                            dealership.addVehicle(newVehicle);
-                        } else {
-                            System.out.println("Invalid data in the file: " + VEHICLES_FILE_PATH);
-                        }
+                        dealership.addVehicle(vehicle);
                     }
-                }
-            } catch (IOException ex) {
-                System.out.println("File not found: " + VEHICLES_FILE_PATH);
-            } catch (NumberFormatException ex) {
-                System.out.println("Invalid data format in the file: " + VEHICLES_FILE_PATH);
+            }
+            catch(FileNotFoundException ex){
+                System.out.println("error finding file to read");
             }
 
             return dealership;
+
         }
 
 
@@ -68,9 +62,8 @@ public class DealershipFileManager {
 
     public static void saveDealership(Dealership dealership) {
                 try{
-                    FileWriter fw = new FileWriter(VEHICLES_FILE_PATH);
+                    FileWriter fw = new FileWriter("src/main/resources/vehicles.csv");
 
-                    //Write the header
                     String headerRow = String.format("%s|%s|%s %n", dealership.getName(), dealership.getAddress(), dealership.getPhone());
                     fw.write(headerRow);
 
@@ -84,7 +77,7 @@ public class DealershipFileManager {
                     fw.close();
                 }
                 catch (IOException ex){
-                    System.out.println("Had a problem writing to the file cuz of: " + ex);
+                    System.out.println("error writing to file: " + ex);
                 }
 
 

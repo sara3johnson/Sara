@@ -7,13 +7,15 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static org.example.Reports.deposits;
+
 
 public class Main {
     public static ArrayList<Transactions> transactions = new ArrayList<>();
     public static ArrayList<Payments> payments = new ArrayList<>();
-    public static ArrayList<Deposits> deposits = new ArrayList<>();
+    public static ArrayList<Deposits> addDeposit = new ArrayList<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
 
@@ -32,7 +34,7 @@ public class Main {
                 System.out.println("What would you like to do today?: ");
 
                 String userChoice = scanner.nextLine().toUpperCase();
-                scanner.nextLine();
+               //**REMOVED REDUNDANT SCANNER scanner.nextLine();
 //switch case made for user input
                 switch (userChoice) {
                     case "D":
@@ -50,10 +52,7 @@ public class Main {
                     default:
                         System.out.println("That is not an option");
                 }
-
-
             }
-
 
         } catch (InputMismatchException ex) {
             System.out.println("Invalid option. Try again");
@@ -61,35 +60,44 @@ public class Main {
     }
 
 
-            public static void makePayments (Scanner scanner) {
-                try {
-                    System.out.println("Enter payment description");
-                    String description = scanner.nextLine();
-                    System.out.println("Enter vendor name: ");
-                    String vendor = scanner.nextLine();
-                    System.out.println("Enter payment amount: ");
-                    double paymentAmount = Double.parseDouble(scanner.nextLine()); // Read payment amount as a String and then parse it to double
-                    LocalDateTime dateTime = LocalDateTime.now();
+    public static void addDeposit(Scanner scanner) {
+        try{
+            System.out.println("Enter description of deposit: ");
+            String description = scanner.nextLine();
+            System.out.println("Enter Vendor: ");
+            String vendor = scanner.nextLine();
+            System.out.println("Enter Amount: ");
+            double amount = Double.parseDouble(scanner.nextLine());
 
-                    Payments payment = new Payments(dateTime, description, vendor, paymentAmount);
-                    payments.add(payment);
+            Deposits deposit = new Deposits(LocalDateTime.now(), description, vendor, amount);
+            deposits.add(deposit);
+            FileWriter fileWriter = new FileWriter("src/main/resources/transactions.csv", true);
+            fileWriter.write(deposit.getDateTime() + "|" + description + "|" + vendor + "|" + amount + "\n");
+            fileWriter.close();
+            System.out.println("Deposit successfully saved.");
+        } catch(IOException exception) {
+            System.out.println("Error occurred.");
+        }
+    }
+    public static void makePayment(Scanner scanner){
+        try{
+            System.out.println("Enter description of payment: ");
+            String description = scanner.nextLine();
+            System.out.println("Enter Vendor: ");
+            String vendor = scanner.nextLine();
+            System.out.println("Enter Amount: ");
+            double amount = Double.parseDouble(scanner.nextLine());
 
-                    // Append the payment details to the transactions.csv file
-                    FileWriter fileWriter = new FileWriter("src/main/resources/transactions.csv", true);
-                    String savePayment = dateTime + "|" + description + "|" + vendor + "|" + paymentAmount + "\n";
-                    fileWriter.write(savePayment);
-                    fileWriter.close();
+            Payments payment = new Payments(LocalDateTime.now(), description, vendor, amount);
+            payments.add(payment);
+            FileWriter fileWriter = new FileWriter("src/main/resources/transactions.csv", true);
+            fileWriter.write(payment.getDateTime() + "|" + description + "|" + vendor + "|" + (-amount) + "\n");
+            fileWriter.close();
+            System.out.println("Payment successfully saved.");
+        } catch (IOException exception) {
+            System.out.println("Error occurred while saving the payment information.");
 
-                    System.out.println("Payment saved successfully!");
-                } catch (IOException | NumberFormatException ex) {
-                    System.out.println("Error: " + ex.getMessage());
-                }
-            }
-
-
-
-
-
-
+        }
+    }
 
 }

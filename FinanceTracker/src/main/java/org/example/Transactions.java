@@ -1,7 +1,6 @@
 package org.example;
 
 import java.time.LocalDateTime;
-import java.util.Scanner;
 
 public class Transactions {
     private LocalDateTime dateTime;

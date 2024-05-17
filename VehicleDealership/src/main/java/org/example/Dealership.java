@@ -8,13 +8,12 @@ public class Dealership {
     private String address;
     private String phone;
 
-    private static ArrayList<Vehicle> inventory;
+   private ArrayList<Vehicle> inventory = new ArrayList<>();
 
     public Dealership(String name, String address, String phone) {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.inventory = inventory;
     }
 
 
@@ -41,6 +40,8 @@ public class Dealership {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+
 
     public List<Vehicle> getVehiclesByPrice(double min, double max) {
         List<Vehicle> filteredVehicle = new ArrayList<>();
@@ -106,18 +107,19 @@ public class Dealership {
         return filteredVehicles;
     }
 
-    public static List<Vehicle> addVehicle(Vehicle vehicle){
+    public void addVehicle(Vehicle vehicle){
         inventory.add(vehicle);
-        return inventory;
 
     }
 
-    public static List<Vehicle> removeVehicle(Vehicle vehicle){
-        inventory.remove(removeVehicle(vehicle));
-        return inventory;
+    public void removeVehicle(Vehicle vehicle){
+        inventory.remove(vehicle);
     }
+
+
 
     public List<Vehicle> getAllVehicles() {
+
         return inventory;
     }
 }

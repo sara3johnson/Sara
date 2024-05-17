@@ -29,8 +29,9 @@ public class UserInterface {
             switch (userInput) {
 
                 case 0:
-                    isRunning = false;
-                    break;
+                    DealershipFileManager.saveDealership(dealership);
+                    System.exit(0);
+
                 case 1:
                     processGetByPriceRequest();
                     break;
@@ -79,19 +80,19 @@ public class UserInterface {
                 double maxPrice = scanner.nextDouble();
 
                 if (minPrice < maxPrice) {
-                    System.out.printf("Results:", minPrice, maxPrice);
+                    System.out.printf("Results:%d and %d", minPrice, maxPrice);
                     List<Vehicle> vehicleList = dealership.getVehiclesByPrice(minPrice, maxPrice);
                     displayVehicles(vehicleList);
                     isGettingByPrice = false;
 
                 }
-
+                else{
+                    System.out.println("min rice can not be greater than the max price");
+                }
 
             } catch (InputMismatchException ex) {
                 System.out.println("Input error!");
             }
-
-
         }
     }
 
